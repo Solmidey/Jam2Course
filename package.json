@@ -16,7 +16,7 @@
   "dependencies": {
     "@cloudflare/workers-types": "^4.20241218.0",
     "@hono/zod-validator": "^0.3.0",
-    "@modelcontextprotocol/sdk": "^0.2.0",
+    "@modelcontextprotocol/sdk": "^0.1.2",
     "hono": "^4.4.10",
     "zod": "^3.23.8"
   },

@@ -1,5 +1,37 @@
 {
+  "name": "jam2course",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "dev": "wrangler dev --local --persist-to=./.wrangler/state",
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "schema": "ts-node scripts/generate-schemas.ts"
+  },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.21.0"
+    "@modelcontextprotocol/sdk": "^1.21.0",
+    "hono": "^4.5.10",
+    "zod": "^3.23.8",
+    "zod-to-json-schema": "^3.23.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.4.3",
+    "@cloudflare/workers-types": "^4.20241011.0",
+    "@types/node": "^20.14.10",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "miniflare": "^3.20241022.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "vitest": "^1.6.0",
+    "wrangler": "^3.78.0"
   }
 }

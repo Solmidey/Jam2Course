@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2022",
+    "moduleResolution": "bundler",
+    "types": ["@cloudflare/workers-types", "vitest"],
+    "lib": ["es2022", "webworker"],
+    "jsx": "preserve",
+    "customConditions": ["worker"],
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src", "test", "scripts"],
+  "exclude": ["node_modules"]
+}

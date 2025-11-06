@@ -1,0 +1,14 @@
+name = "jam2course"
+main = "src/index.ts"
+compatibility_date = "2024-08-06"
+workers_dev = true
+
+[vars]
+REQUIRE_AUTH = "false"
+DETERMINISTIC = "true"
+CACHE_LIMIT = "32"
+CACHE_TTL_SECONDS = "86400"
+
+[[migrations]]
+id = "20240101000000"
+new_classes = ["CourseCacheDO"]

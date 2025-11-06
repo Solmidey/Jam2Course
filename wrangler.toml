@@ -1,0 +1,20 @@
+name = "jam2course"
+main = "src/index.ts"
+compatibility_date = "2024-08-06"
+
+[durable_objects]
+bindings = [
+  { name = "COURSE_CACHE", class_name = "CourseCacheDO" }
+]
+
+[[migrations]]
+id = "2024-08-06-course-cache"
+durable_objects = [
+  { name = "COURSE_CACHE", class_name = "CourseCacheDO" }
+]
+
+[vars]
+DETERMINISTIC = "true"
+REQUIRE_AUTH = "false"
+CACHE_CAPACITY = "64"
+CACHE_TTL_SECONDS = "86400"
